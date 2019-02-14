@@ -115,7 +115,7 @@ unzip web2py_src.zip
 mv web2py waf2py_community
 mv /home/www-data/waf2py_community/handlers/wsgihandler.py /home/www-data/waf2py_community/wsgihandler.py
 cd $current_dir
-unzip Waf2Py.zip
+#unzip Waf2Py.zip
 mv Waf2Py /home/www-data/waf2py_community/applications/
 echo "
 routers = dict( 
