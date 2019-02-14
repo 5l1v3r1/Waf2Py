@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-primary">
+            <div class="box-body">
+                <h4 >Manage global rules</h4>
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th style="width:auto">Filter</th>
+                                <th style="width:auto">Action</th>
+                            </tr>
+                            {{counter = 0}}
+                            {{for rule in rule_list:}}
+                                {{counter += 1}}
+                                <tr>
+                                    <td style="vertical-align: middle; width">{{=rule.title()}}</td>
+                                    <td style="vertical-align: middle;" align="center">
+                                        <!-- Rounded switch -->
+                                        <label class="switch">
+                          <input type="checkbox" {{try:}}{{if r_states[rule.title().lower()] == 'On':}}checked{{else:}}""{{pass}}{{except:}}{{pass}} id="setQuickVar{{=counter}}">
+                          <div class="slider round"></div>
+                        </label>
+                                        <script>
+                                            $('#setQuickVar{{=counter}}').on('click', function() {
+                                              var status = this.checked ? 'On' : 'Off';
+                                              //var id_rand = {{=str(query[0]['id_rand'])}};
+                                              $.ajax({
+                                                 type  : 'POST',
+                                                  url  : '{{=URL('default','ManageRules')}}',
+                                                  data : {rule:'{{=rule}}',action:status,id:'{{=query[0]['id_rand']}}'},
+                                                  function (data) {
+                                                  $('#resultQuickVar{{=counter}}').load(location.href + " #resultQuickVar{{=counter}}");
+                                                  }
+                                              });
+                                              });
+                                        </script>
+                                    </td>
+                                </tr>
+                           {{pass}} 
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>
+</div>
