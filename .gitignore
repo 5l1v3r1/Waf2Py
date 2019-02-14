@@ -15,12 +15,3 @@ __pycache__/
 ## backup files
 *.bak
 
-##sessions folder an error
-Waf2Py/errors/*
-Waf2Py/sessions/*
-
-##database folder
-Waf2Py/databases/*
-
-##logrotation folder
-Waf2Py/logrotation.d/*
