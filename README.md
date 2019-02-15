@@ -33,7 +33,7 @@ if you already compiled the openresty(nginx) and modsecurity and just need to up
 ```
 git clone --branch waf2py_modsec3 --single-branch https://github.com/ITSec-Chile/Waf2Py.git
 cd Waf2Py
-unzip Waf2Py.zip
+
 #Replace old app with new one
 cp -r Waf2Py /home/www-data/waf2py_community/applications/
 chown -R www-data.www-data /home/www-data/waf2py_community/applications/Waf2Py/
