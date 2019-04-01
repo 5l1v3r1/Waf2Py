@@ -148,7 +148,7 @@ def AddGateway():
 
     #eprint str(default_gateway.splitlines()[0]) + " " + request.vars['gateway']
     #Validate vars
-    if a == 'YES' and b == 'YES' and c == 'YES' and str(default_gateway.splitlines()[0]) != str(request.vars['gateway']):
+    if a == 'YES' and b == 'YES' and c == 'YES':
         process = subprocess.Popen(['sudo', '/sbin/route', 'add', request.vars['ip'], 'gw', request.vars['gateway'], 'dev', request.vars['iface']], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         process,err = process.communicate()
         if err:
