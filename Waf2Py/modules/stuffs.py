@@ -363,9 +363,10 @@ class Maintenance:
         notifempty\n\
         compress\n\
         sharedscripts\n\
-        postrotate\n\
-        /bin/kill -USR1 `cat /opt/waf/nginx/var/run/nginx.pid 2>/dev/null` 2>/dev/null || true\n\
-        endscript\n\
+        copytruncate\n\
+        #postrotate\n\
+        #/bin/kill -USR1 `cat /opt/waf/nginx/var/run/nginx.pid 2>/dev/null` 2>/dev/null || true\n\
+        #endscript\n\
         /bin/chown -R www-data.www-data /opt/waf/nginx/var/log/"+self.app_name+"/ || true\n\
         }"
         
