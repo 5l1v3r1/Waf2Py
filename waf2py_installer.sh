@@ -218,6 +218,7 @@ cd openresty-1.13.6.2
 --with-http_ssl_module \
 --with-http_geoip_module \
 --with-http_v2_module \
+--with-http_realip_module \
 --with-openssl=/usr/src/waf/openssl-1.1.0j \
 --prefix=/opt/waf \
 --sbin-path=/opt/waf/nginx/sbin/nginx \
