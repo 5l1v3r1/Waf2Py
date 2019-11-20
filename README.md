@@ -23,7 +23,7 @@ https://drive.google.com/file/d/1kQwX0pNL6CrRKU9yBES69qDnGNRVmO8a/view?usp=shari
 ## Installing steps
 
 ```
-git clone --branch waf2py_modsec3 --single-branch https://github.com/ITSec-Chile/Waf2Py.git
+git clone https://github.com/ITSec-Chile/Waf2Py
 cd Waf2Py
 su root
 chmod +x waf2py_installer.sh
