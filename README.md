@@ -31,7 +31,7 @@ chmod +x waf2py_installer.sh
 ```
 if you already compiled the openresty(nginx) and modsecurity and just need to update the waf2py app, follow this steps
 ```
-git clone --branch waf2py_modsec3 --single-branch https://github.com/ITSec-Chile/Waf2Py.git
+git clone https://github.com/ITSec-Chile/Waf2Py
 cd Waf2Py
 
 #Replace old app with new one
