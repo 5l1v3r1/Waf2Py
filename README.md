@@ -15,7 +15,7 @@ Waf2Py is a nice and easy to use web interface for modsecurity v3 with nginx con
 - Restrict paths or files
 - Insert headers
 
-### Update ###
+## Update 21-11-2019 ##
 waf2py actually is being ported to python3 and adapted to work without deprecated network tools as ifconfig and others that are not more included in debian 9 and 10.
 Also the parser for modesecurity audit logs is being adapted because now the structure of json modsecurity logs has been changed a bit.
 
